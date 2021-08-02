@@ -1,1 +1,1 @@
-from blobfeedstroage.extensions import fullname, BlobFeedStorage
+from blobfeedstroage.extensions import BlobFeedStorage
