@@ -10,8 +10,8 @@ pip install git+https://github.com/nchannelmosfet/blobfeedstorage
 Add the following custom_settings to your scrapy spider. 
 Credit: QuotesSpider from https://docs.scrapy.org/en/latest/intro/overview.html
 ```
-from blobfeedstroage import BlobFeedStorage
-from blobfeedstroage.utils import fullname
+from blobfeedstorage import BlobFeedStorage
+from blobfeedstorage.utils import fullname
 import scrapy
 import os
 

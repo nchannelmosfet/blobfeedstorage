@@ -1,1 +1,0 @@
-from blobfeedstroage.extensions import BlobFeedStorage
