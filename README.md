@@ -29,6 +29,7 @@ class QuotesSpider(scrapy.Spider):
                 'encoding': 'utf8',
             }
         },
+        # FEED_STORAGES defined here are merged with FEED_STORAGES_BASE
         'FEED_STORAGES': {
             'blob': fullname(BlobFeedStorage)  # fulname() gets fully qualified name of BlobFeedStorage
         },
@@ -51,6 +52,6 @@ class QuotesSpider(scrapy.Spider):
 # Disclaimer
 I didn't see any official or 3rd party support for feed export to Azure Blob Storage.
 So I decided to do it myself after reading the S3FeedStorage and GCSFeedStorage implementations at: 
-https://github.com/scrapy/scrapy/blob/2.5/scrapy/extensions/feedexport.py
+https://github.com/scrapy/scrapy/blob/2.5/scrapy/extensions/feedexport.py. 
 There are probably more ways that scrapy and Azure Blob Storage can interact with each other. 
 But I am no expert in either, so I kept it as simple as possible. 
