@@ -13,6 +13,7 @@ Credit: QuotesSpider from https://docs.scrapy.org/en/latest/intro/overview.html
 from blobfeedstroage import BlobFeedStorage
 from blobfeedstroage.utils import fullname
 import scrapy
+import os
 
 
 class QuotesSpider(scrapy.Spider):
