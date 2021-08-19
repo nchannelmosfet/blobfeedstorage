@@ -24,8 +24,9 @@ class QuotesSpider(scrapy.Spider):
 
     custom_settings = {
         # Expect feed uri in the form of blob://<storage_accout_name>.blob.core.windows.net/<container_name>/<blob_name>
+        # <blob_name> can root level or nested
         'FEEDS': {
-            'blob://my-storage-account.blob.core.windows.net/blob-container/%(name)s_%(time)s.json': {
+            'blob://my-storage-account.blob.core.windows.net/blob-container/spiders/%(name)s_%(time)s.json': {
                 'format': 'json',
                 'encoding': 'utf8',
             }
@@ -35,6 +36,7 @@ class QuotesSpider(scrapy.Spider):
             'blob': fullname(BlobFeedStorage)  # fulname() gets fully qualified name of BlobFeedStorage
         },
         'AZURE_STORAGE_CONN_STR': os.getenv('AZURE_STORAGE_CONN_STR')   # authorize via connection string
+        'AZURE_STORAGE_OVERWRITE': True     # allow existing blob to be overwritten, default False
     }
 
     def parse(self, response):
