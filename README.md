@@ -24,7 +24,7 @@ class QuotesSpider(scrapy.Spider):
 
     custom_settings = {
         # Expect feed uri in the form of blob://<storage_accout_name>.blob.core.windows.net/<container_name>/<blob_name>
-        # <blob_name> can root level or nested
+        # <blob_name> can be at root level or nested
         'FEEDS': {
             'blob://my-storage-account.blob.core.windows.net/blob-container/spiders/%(name)s_%(time)s.json': {
                 'format': 'json',
