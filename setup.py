@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="blobfeedstorage",
-    version="0.0.1",
+    version="0.1.0",
     author="Jerry Wu",
     author_email="nchannelmosfet@gmail.com",
     description="Enables Scrapy to use Azure Blob Storage as storage backend",
