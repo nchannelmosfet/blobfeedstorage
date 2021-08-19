@@ -52,9 +52,14 @@ class QuotesSpider(scrapy.Spider):
 
 ```
 
-# Disclaimer
+# Release Note
+## v0.0.1
 I didn't see any official or 3rd party support for feed export to Azure Blob Storage.
 So I decided to do it myself after reading the S3FeedStorage and GCSFeedStorage implementations at: 
 https://github.com/scrapy/scrapy/blob/2.5/scrapy/extensions/feedexport.py. 
 There are probably more ways that scrapy and Azure Blob Storage can interact with each other. 
 But I am no expert in either, so I kept it as simple as possible. 
+
+## v0.1.0
+* Added support for nested blob uri
+* Added AZURE_STORAGE_OVERWRITE setting, allows user to overwrite exist blob if True
